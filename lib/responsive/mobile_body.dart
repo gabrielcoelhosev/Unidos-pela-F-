@@ -28,7 +28,8 @@ class _mobileBodyState extends State<mobileBody> {
                 Center(
                   child: Text(
                     'Unidos pela Fé',
-                    style: TextStyle(color: Colors.white, fontSize: 60),
+                    style: TextStyle(color: Colors.white, fontSize: 50),
+                    softWrap: true,
                   ),
                 )
               ],

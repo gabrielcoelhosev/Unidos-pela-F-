@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unidos_pela_fe/data.dart';
 
 class MobileBody extends StatefulWidget {
   const MobileBody({super.key});
@@ -8,6 +9,12 @@ class MobileBody extends StatefulWidget {
 }
 
 class _MobileBodyState extends State<MobileBody> {
+  List<Data> capas = [
+    Data(image: 'assets/imgs/catolico.jpg', text: 'Católico'),
+    Data(image: 'assets/imgs/ubanda.jpg', text: 'Ubanda'),
+    Data(image: 'assets/imgs/evangelico.jpg', text: 'Evangélico')
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -145,6 +152,64 @@ class _MobileBodyState extends State<MobileBody> {
                     ],
                   ),
                 ),
+              ),
+            ),
+            Container(
+              color: Colors.grey.shade900,
+              height: 1800,
+              width: double.infinity,
+              child: Column(
+                children: [
+                  SizedBox(height: 100),
+                  Center(
+                    child: Text(
+                      'Veja nosso Portifólio',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Dancing',
+                          fontSize: 40),
+                    ),
+                  ),
+                  SizedBox(height: 100),
+                  GridView.builder(
+                      itemCount: 3,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 1),
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: () {},
+                          child: Expanded(
+                            flex: 10,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: Container(
+                                    height: 400,
+                                    width: 400,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        image: DecorationImage(
+                                            image:
+                                                AssetImage(capas[index].image),
+                                            fit: BoxFit.cover)),
+                                  ),
+                                ),
+                                Center(
+                                  child: Text(capas[index].text,
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontFamily: 'Dancing',
+                                          fontSize: 25)),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      }),
+                ],
               ),
             ),
           ],

@@ -63,6 +63,10 @@ flutter:
     - assets/imgs/capa.jpg
     - assets/imgs/amanda.jpeg
     - assets/imgs/daniel.jpeg
+    - assets/imgs/catolico.jpg
+    - assets/imgs/ubanda.jpg
+    - assets/imgs/evangelico.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

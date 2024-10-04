@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unidos_pela_fe/data.dart';
 
 class DesktopBody extends StatefulWidget {
   const DesktopBody({super.key});
@@ -8,6 +9,12 @@ class DesktopBody extends StatefulWidget {
 }
 
 class _DesktopBodyState extends State<DesktopBody> {
+  List<Data> capas = [
+    Data(image: 'assets/imgs/catolico.jpg', text: 'Católico'),
+    Data(image: 'assets/imgs/ubanda.jpg', text: 'Ubanda'),
+    Data(image: 'assets/imgs/evangelico.jpg', text: 'Evangélico')
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -128,8 +135,8 @@ class _DesktopBodyState extends State<DesktopBody> {
               ),
             ),
             Container(
-              height: 4000, // Altura fixa para o GridView
-              color: Colors.grey, // Apenas um exemplo de cor de fundo
+              height: 1000, // Altura fixa para o GridView
+              color: Colors.grey.shade900, // Apenas um exemplo de cor de fundo
               child: Column(
                 children: [
                   SizedBox(
@@ -160,31 +167,39 @@ class _DesktopBodyState extends State<DesktopBody> {
                       ),
                       itemCount: 3, // Número total de itens no grid
                       itemBuilder: (context, index) {
-                        return Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(20.0),
-                              child: Container(
-                                height: 400,
-                                width: 400,
-                                color: Colors.red,
-                              ),
-                            ),
-                            Expanded(
-                              child: Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(0.0),
-                                  child: Text(
-                                    'Religião',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 25,
-                                        fontFamily: 'Dancing'),
-                                  ),
+                        return GestureDetector(
+                          onTap: () {},
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(0.0),
+                                child: Container(
+                                  height: 400,
+                                  width: 400,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      image: DecorationImage(
+                                          image: AssetImage(capas[index].image),
+                                          fit: BoxFit.cover)),
                                 ),
                               ),
-                            )
-                          ],
+                              Expanded(
+                                flex: 10,
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(0.0),
+                                    child: Text(
+                                      capas[index].text,
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontFamily: 'Dancing'),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         );
                       },
                     ),

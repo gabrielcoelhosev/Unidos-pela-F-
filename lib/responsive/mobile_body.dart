@@ -28,7 +28,10 @@ class _MobileBodyState extends State<MobileBody> {
                 Center(
                   child: Text(
                     'Unidos pela Fé',
-                    style: TextStyle(color: Colors.white, fontSize: 50),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 65,
+                        fontFamily: 'Dancing'),
                     softWrap: true,
                   ),
                 ),
@@ -37,7 +40,7 @@ class _MobileBodyState extends State<MobileBody> {
             Container(
               height: 2500,
               width: double.infinity,
-              color: Colors.grey,
+              color: Colors.black,
               child: Container(
                 child: Padding(
                   padding: const EdgeInsets.all(0.0),
@@ -50,30 +53,41 @@ class _MobileBodyState extends State<MobileBody> {
                           children: [
                             Text(
                               'Quem Somos?',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 40),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 40,
+                                  fontFamily: 'Dancing'),
                             ),
                             SizedBox(height: 60),
                             Text(
                               'Nós somos a Amanda e o Daniel, e juntos formamos uma dupla de fotógrafos chamada Unidos pela Fé.',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w200,
+                                  fontFamily: 'RobotoCondensed'),
                               softWrap: true,
                               textAlign: TextAlign.center,
                             ),
                             SizedBox(height: 20),
                             Text(
                               'Especializados em eternizar momentos religiosos, fazemos cobertura de pequenos e grandes eventos como: aniversários, batizados, batuques, elebós, casamentos, apresentações religiosas em geral, etc.',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w200,
+                                  fontFamily: 'RobotoCondensed'),
                               softWrap: true,
                               textAlign: TextAlign.center,
                             ),
                             SizedBox(height: 20),
                             Text(
                               'Queremos registrar o seu momento religioso com muito amor e carinho, criando um vínculo para a vida toda para você e sua família.',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w200,
+                                  fontFamily: 'RobotoCondensed'),
                               softWrap: true,
                               textAlign: TextAlign.center,
                             ),
@@ -86,7 +100,10 @@ class _MobileBodyState extends State<MobileBody> {
                       Center(
                         child: Text(
                           'Amanda',
-                          style: TextStyle(color: Colors.white, fontSize: 40),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 40,
+                              fontFamily: 'Dancing'),
                         ),
                       ),
                       SizedBox(
@@ -107,7 +124,10 @@ class _MobileBodyState extends State<MobileBody> {
                       Center(
                         child: Text(
                           'Daniel',
-                          style: TextStyle(color: Colors.white, fontSize: 40),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 40,
+                              fontFamily: 'Dancing'),
                         ),
                       ),
                       SizedBox(

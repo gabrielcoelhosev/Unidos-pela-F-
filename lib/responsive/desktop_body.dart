@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unidos_pela_fe/data.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DesktopBody extends StatefulWidget {
   const DesktopBody({super.key});
@@ -30,6 +31,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                   child: Image.asset(
                     'assets/imgs/capa.jpg',
                     fit: BoxFit.cover,
+                    alignment: Alignment(0.5, -0.4),
                   ),
                 ),
                 Center(
@@ -135,7 +137,7 @@ class _DesktopBodyState extends State<DesktopBody> {
               ),
             ),
             Container(
-              height: 1000, // Altura fixa para o GridView
+              height: 800, // Altura fixa para o GridView
               color: Colors.grey.shade900, // Apenas um exemplo de cor de fundo
               child: Column(
                 children: [
@@ -206,7 +208,168 @@ class _DesktopBodyState extends State<DesktopBody> {
                   ),
                 ],
               ),
-            )
+            ),
+            Container(
+              height: 800,
+              width: double.infinity,
+              color: Colors.black,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 70,
+                  ),
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 200,
+                      ),
+                      Center(
+                        child: Text(
+                          'Entre em Contato',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 35,
+                              fontFamily: 'Dancing'),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 70,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ConstrainedBox(
+                            constraints: BoxConstraints(
+                                maxWidth: 500), // Limita a largura do texto
+                            child: Center(
+                              child: Text(
+                                'Cada momento é um presente divino, e suas celebrações merecem ser eternizadas com respeito e profissionalismo.',
+                                softWrap: true,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25,
+                                    fontFamily: 'RobotoCondensed'),
+                                textAlign:
+                                    TextAlign.center, // Centraliza o texto
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 20), // Espaço entre os textos
+                          ConstrainedBox(
+                            constraints: BoxConstraints(
+                                maxWidth: 500), // Limita a largura do texto
+                            child: Center(
+                              child: Text(
+                                'Entre em contato com nossa equipe e permita-nos transformar seus momentos sagrados em memórias eternas.',
+                                softWrap: true,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 25,
+                                    fontFamily: 'RobotoCondensed'),
+                                textAlign:
+                                    TextAlign.center, // Centraliza o texto
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 80,
+                      ),
+                      Row(
+                        children: [
+                          TextButton(
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.white,
+                              ),
+                              onPressed: () {},
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    FaIcon(FontAwesomeIcons.whatsapp,
+                                        color: Colors.green, size: 25),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      'Contato Amanda',
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 18),
+                                    ),
+                                  ],
+                                ),
+                              )),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                              style: TextButton.styleFrom(
+                                  backgroundColor: Colors.white),
+                              onPressed: () {},
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    FaIcon(FontAwesomeIcons.whatsapp,
+                                        color: Colors.green, size: 25),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      'Contato Daniel',
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 18),
+                                    ),
+                                  ],
+                                ),
+                              ))
+                        ],
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(50.0),
+                    child: Container(
+                      height: 700,
+                      width: 500,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              image:
+                                  AssetImage('assets/imgs/criarmemorias.jpeg'),
+                              fit: BoxFit.cover)),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: 70,
+              width: double.infinity,
+              color: Colors.black,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Center(
+                    child: Text(
+                      'Copyright © Todos os direitos reservados Unidos pela Fé',
+                      style: TextStyle(color: Colors.white, fontSize: 12),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),

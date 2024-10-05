@@ -15,7 +15,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ResponsiveLayout(
-          mobileBody: MobileBody(), desktopBody: DesktopBody()),
+          mobileBody: const MobileBody(), desktopBody: const DesktopBody()),
     );
   }
 }

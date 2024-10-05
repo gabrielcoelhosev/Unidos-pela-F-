@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:unidos_pela_fe/data.dart';
 
 class MobileBody extends StatefulWidget {
@@ -32,7 +33,7 @@ class _MobileBodyState extends State<MobileBody> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                Center(
+                const Center(
                   child: Text(
                     'Unidos pela Fé',
                     style: TextStyle(
@@ -53,9 +54,9 @@ class _MobileBodyState extends State<MobileBody> {
                   padding: const EdgeInsets.all(0.0),
                   child: Column(
                     children: [
-                      SizedBox(height: 50),
-                      Padding(
-                        padding: const EdgeInsets.all(30.0),
+                      const SizedBox(height: 50),
+                      const Padding(
+                        padding: EdgeInsets.all(30.0),
                         child: Column(
                           children: [
                             Text(
@@ -101,10 +102,10 @@ class _MobileBodyState extends State<MobileBody> {
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 100,
                       ),
-                      Center(
+                      const Center(
                         child: Text(
                           'Amanda',
                           style: TextStyle(
@@ -113,7 +114,7 @@ class _MobileBodyState extends State<MobileBody> {
                               fontFamily: 'Dancing'),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Container(
@@ -121,14 +122,14 @@ class _MobileBodyState extends State<MobileBody> {
                         width: 400,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/imgs/amanda.jpeg'),
                                 fit: BoxFit.cover)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 100,
                       ),
-                      Center(
+                      const Center(
                         child: Text(
                           'Daniel',
                           style: TextStyle(
@@ -137,7 +138,7 @@ class _MobileBodyState extends State<MobileBody> {
                               fontFamily: 'Dancing'),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Container(
@@ -145,7 +146,7 @@ class _MobileBodyState extends State<MobileBody> {
                         width: 400,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage('assets/imgs/daniel.jpeg'),
                                 fit: BoxFit.cover)),
                       ),
@@ -160,8 +161,8 @@ class _MobileBodyState extends State<MobileBody> {
               width: double.infinity,
               child: Column(
                 children: [
-                  SizedBox(height: 100),
-                  Center(
+                  const SizedBox(height: 100),
+                  const Center(
                     child: Text(
                       'Veja nosso Portifólio',
                       style: TextStyle(
@@ -170,13 +171,14 @@ class _MobileBodyState extends State<MobileBody> {
                           fontSize: 40),
                     ),
                   ),
-                  SizedBox(height: 100),
+                  const SizedBox(height: 100),
                   GridView.builder(
                       itemCount: 3,
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 1),
+                      physics: const NeverScrollableScrollPhysics(),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 1),
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {},
@@ -199,7 +201,7 @@ class _MobileBodyState extends State<MobileBody> {
                                 ),
                                 Center(
                                   child: Text(capas[index].text,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontFamily: 'Dancing',
                                           fontSize: 25)),
@@ -209,6 +211,167 @@ class _MobileBodyState extends State<MobileBody> {
                           ),
                         );
                       }),
+                ],
+              ),
+            ),
+            Container(
+              height: 1500,
+              width: double.infinity,
+              color: Colors.black,
+              child: Column(
+                children: [
+                  const SizedBox(
+                    width: 70,
+                  ),
+                  Column(
+                    children: [
+                      const SizedBox(
+                        height: 80,
+                      ),
+                      const Center(
+                        child: Text(
+                          'Entre em Contato',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 35,
+                              fontFamily: 'Dancing'),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 70,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ConstrainedBox(
+                            constraints: const BoxConstraints(
+                                maxWidth: 300), // Limita a largura do texto
+                            child: const Center(
+                              child: Text(
+                                'Cada momento é um presente divino, e suas celebrações merecem ser eternizadas com respeito e profissionalismo.',
+                                softWrap: true,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontFamily: 'RobotoCondensed'),
+                                textAlign:
+                                    TextAlign.center, // Centraliza o texto
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 20), // Espaço entre os textos
+                          ConstrainedBox(
+                            constraints: const BoxConstraints(
+                                maxWidth: 300), // Limita a largura do texto
+                            child: const Center(
+                              child: Text(
+                                'Entre em contato com nossa equipe e permita-nos transformar seus momentos sagrados em memórias eternas.',
+                                softWrap: true,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontFamily: 'RobotoCondensed'),
+                                textAlign:
+                                    TextAlign.center, // Centraliza o texto
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 80,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.white,
+                              ),
+                              onPressed: () {},
+                              child: const Padding(
+                                padding: EdgeInsets.all(7.0),
+                                child: Row(
+                                  children: [
+                                    FaIcon(FontAwesomeIcons.whatsapp,
+                                        color: Colors.green, size: 20),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      'Contato Amanda',
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                              )),
+                          const SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                              style: TextButton.styleFrom(
+                                  backgroundColor: Colors.white),
+                              onPressed: () {},
+                              child: const Padding(
+                                padding: EdgeInsets.all(7.0),
+                                child: Row(
+                                  children: [
+                                    FaIcon(FontAwesomeIcons.whatsapp,
+                                        color: Colors.green, size: 20),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      'Contato Daniel',
+                                      style: TextStyle(
+                                          color: Colors.black, fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                              ))
+                        ],
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(50.0),
+                    child: Container(
+                      height: 700,
+                      width: 500,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: const DecorationImage(
+                              image:
+                                  AssetImage('assets/imgs/criarmemorias.jpeg'),
+                              fit: BoxFit.cover)),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: 40,
+              width: double.infinity,
+              color: Colors.black,
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Center(
+                    child: Text(
+                      'Copyright © Todos os direitos reservados Unidos pela Fé',
+                      style: TextStyle(color: Colors.white, fontSize: 12),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
                 ],
               ),
             ),

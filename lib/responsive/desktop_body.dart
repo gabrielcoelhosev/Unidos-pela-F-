@@ -31,10 +31,10 @@ class _DesktopBodyState extends State<DesktopBody> {
                   child: Image.asset(
                     'assets/imgs/capa.jpg',
                     fit: BoxFit.cover,
-                    alignment: Alignment(0.5, -0.4),
+                    alignment: const Alignment(0.5, -0.4),
                   ),
                 ),
-                Center(
+                const Center(
                   child: Text(
                     'Unidos pela Fé',
                     style: TextStyle(
@@ -60,7 +60,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                       width: 350,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage('assets/imgs/amanda.jpeg'),
                           fit: BoxFit.cover,
                         ),
@@ -68,9 +68,9 @@ class _DesktopBodyState extends State<DesktopBody> {
                     ),
                   ),
                   // Ajustar largura do texto e movê-lo mais para baixo
-                  Container(
+                  SizedBox(
                     width: 400, // Largura menor para o texto
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment:
                           MainAxisAlignment.start, // Alinhar no início
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -126,7 +126,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                       width: 350,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage('assets/imgs/daniel.jpeg'),
                           fit: BoxFit.cover,
                         ),
@@ -141,10 +141,10 @@ class _DesktopBodyState extends State<DesktopBody> {
               color: Colors.grey.shade900, // Apenas um exemplo de cor de fundo
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
-                  Center(
+                  const Center(
                     child: Text(
                       'Veja nosso Portifólio',
                       style: TextStyle(
@@ -153,14 +153,15 @@ class _DesktopBodyState extends State<DesktopBody> {
                           fontSize: 40),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   Expanded(
                     child: GridView.builder(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      physics: const NeverScrollableScrollPhysics(),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3, // Número de colunas
                         crossAxisSpacing:
                             10, // Espaçamento horizontal entre os itens
@@ -192,7 +193,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                                     padding: const EdgeInsets.all(0.0),
                                     child: Text(
                                       capas[index].text,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 25,
                                           fontFamily: 'Dancing'),
@@ -216,15 +217,15 @@ class _DesktopBodyState extends State<DesktopBody> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 70,
                   ),
                   Column(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 200,
                       ),
-                      Center(
+                      const Center(
                         child: Text(
                           'Entre em Contato',
                           style: TextStyle(
@@ -233,16 +234,16 @@ class _DesktopBodyState extends State<DesktopBody> {
                               fontFamily: 'Dancing'),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 70,
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ConstrainedBox(
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                                 maxWidth: 500), // Limita a largura do texto
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'Cada momento é um presente divino, e suas celebrações merecem ser eternizadas com respeito e profissionalismo.',
                                 softWrap: true,
@@ -255,11 +256,11 @@ class _DesktopBodyState extends State<DesktopBody> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 20), // Espaço entre os textos
+                          const SizedBox(height: 20), // Espaço entre os textos
                           ConstrainedBox(
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                                 maxWidth: 500), // Limita a largura do texto
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'Entre em contato com nossa equipe e permita-nos transformar seus momentos sagrados em memórias eternas.',
                                 softWrap: true,
@@ -274,7 +275,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 80,
                       ),
                       Row(
@@ -284,8 +285,8 @@ class _DesktopBodyState extends State<DesktopBody> {
                                 backgroundColor: Colors.white,
                               ),
                               onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Row(
                                   children: [
                                     FaIcon(FontAwesomeIcons.whatsapp,
@@ -301,15 +302,15 @@ class _DesktopBodyState extends State<DesktopBody> {
                                   ],
                                 ),
                               )),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
                           TextButton(
                               style: TextButton.styleFrom(
                                   backgroundColor: Colors.white),
                               onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
                                 child: Row(
                                   children: [
                                     FaIcon(FontAwesomeIcons.whatsapp,
@@ -336,27 +337,27 @@ class _DesktopBodyState extends State<DesktopBody> {
                       width: 500,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image:
                                   AssetImage('assets/imgs/criarmemorias.jpeg'),
                               fit: BoxFit.cover)),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   )
                 ],
               ),
             ),
             Container(
-              height: 70,
+              height: 150,
               width: double.infinity,
               color: Colors.black,
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SizedBox(
-                    height: 20,
+                    height: 80,
                   ),
                   Center(
                     child: Text(

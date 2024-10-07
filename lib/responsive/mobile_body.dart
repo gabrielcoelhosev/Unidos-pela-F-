@@ -9,8 +9,6 @@ class MobileBody extends StatefulWidget {
   State<MobileBody> createState() => _MobileBodyState();
 }
 
-  //Arrumar a responsividade
-
 class _MobileBodyState extends State<MobileBody> {
   List<Data> capas = [
     Data(image: 'assets/imgs/catolico.jpg', text: 'Católico'),

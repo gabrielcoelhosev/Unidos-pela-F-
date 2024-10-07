@@ -171,7 +171,9 @@ class _DesktopBodyState extends State<DesktopBody> {
                       itemCount: 3, // Número total de itens no grid
                       itemBuilder: (context, index) {
                         return GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+
+                          },
                           child: Column(
                             children: [
                               Padding(

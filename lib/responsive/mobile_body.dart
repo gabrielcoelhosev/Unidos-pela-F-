@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:unidos_pela_fe/data.dart';
 import 'package:unidos_pela_fe/responsive/catolicor.dart';
+import 'package:unidos_pela_fe/responsive/evangelicor.dart';
+import 'package:unidos_pela_fe/responsive/ubandar.dart';
 
 class MobileBody extends StatefulWidget {
   const MobileBody({super.key});
@@ -329,6 +331,14 @@ class _MobileBodyState extends State<MobileBody> {
     if (religi.text == "Católico") {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => catolicoR()));
+    }
+    if (religi.text == "Ubanda") {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ubandarR()));
+    }
+    if (religi.text == "Evangélico") {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => evangelicoR()));
     }
   }
 }

@@ -10,6 +10,8 @@ class catolicoDesk extends StatefulWidget {
 class _catolicoDeskState extends State<catolicoDesk> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.red,
+    );
   }
 }

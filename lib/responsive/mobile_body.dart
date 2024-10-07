@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:unidos_pela_fe/data.dart';
+import 'package:unidos_pela_fe/responsive/catolicor.dart';
 
 class MobileBody extends StatefulWidget {
   const MobileBody({super.key});
@@ -113,34 +114,39 @@ class _MobileBodyState extends State<MobileBody> {
                         childAspectRatio: 1.2,
                       ),
                       itemBuilder: (BuildContext context, int index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 280,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  image: DecorationImage(
-                                    image: AssetImage(capas[index].image),
-                                    fit: BoxFit.cover,
+                        return GestureDetector(
+                          onTap: () {
+                            _redirecionador(capas[index]);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Column(
+                              children: [
+                                Container(
+                                  height: 280,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    image: DecorationImage(
+                                      image: AssetImage(capas[index].image),
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(height: 5),
-                              Flexible(
-                                child: Text(
-                                  capas[index].text,
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Dancing',
-                                      fontSize: 25),
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 2,
+                                const SizedBox(height: 5),
+                                Flexible(
+                                  child: Text(
+                                    capas[index].text,
+                                    style: const TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Dancing',
+                                        fontSize: 25),
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -317,5 +323,12 @@ class _MobileBodyState extends State<MobileBody> {
         ],
       ),
     );
+  }
+
+  void _redirecionador(Data religi) {
+    if (religi.text == "Católico") {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => catolicoR()));
+    }
   }
 }

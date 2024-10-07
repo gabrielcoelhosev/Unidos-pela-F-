@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:unidos_pela_fe/data.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:unidos_pela_fe/responsive/catolicor.dart';
+import 'package:unidos_pela_fe/responsive/evangelicor.dart';
+import 'package:unidos_pela_fe/responsive/ubandar.dart';
 
 class DesktopBody extends StatefulWidget {
   const DesktopBody({super.key});
@@ -172,7 +175,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                       itemBuilder: (context, index) {
                         return GestureDetector(
                           onTap: () {
-
+                            _redirecionador(capas[index]);
                           },
                           child: Column(
                             children: [
@@ -377,5 +380,20 @@ class _DesktopBodyState extends State<DesktopBody> {
         ),
       ),
     );
+  }
+
+  void _redirecionador(Data religi) {
+    if (religi.text == "Católico") {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => catolicoR()));
+    }
+    if (religi.text == "Ubanda") {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ubandarR()));
+    }
+    if (religi.text == "Evangélico") {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => evangelicoR()));
+    }
   }
 }

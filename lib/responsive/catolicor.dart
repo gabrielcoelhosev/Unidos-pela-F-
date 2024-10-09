@@ -15,7 +15,7 @@ class _catolicoRState extends State<catolicoR> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ResponsiveLayout(
-          mobileBody: catolicoMob(), desktopBody: catolicoDesk()),
+          mobileBody: catolicoMob(), desktopBody: CatolicoDesk()),
     );
   }
 }

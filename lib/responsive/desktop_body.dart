@@ -37,15 +37,34 @@ class _DesktopBodyState extends State<DesktopBody> {
                     alignment: const Alignment(0.5, -0.4),
                   ),
                 ),
-                const Center(
-                  child: Text(
-                    'Unidos pela Fé',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 100,
-                        fontFamily: 'Dancing'),
-                    softWrap: true,
-                  ),
+                Column(
+                  children: [
+                    const Center(
+                      child: Text(
+                        'Unidos pela Fé',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 100,
+                            fontFamily: 'Dancing'),
+                        softWrap: true,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(FontAwesomeIcons.whatsapp,
+                              color: Colors.white),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(FontAwesomeIcons.instagram,
+                              color: Colors.white),
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ],
             ),

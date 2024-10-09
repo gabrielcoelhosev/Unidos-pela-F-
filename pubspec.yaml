@@ -74,6 +74,22 @@ flutter:
     - assets/imgs/cat3.jpg
     - assets/imgs/cat4.jpg
     - assets/imgs/cat5.jpg
+    - assets/imgs/ubanda1.jpg
+    - assets/imgs/ubanda2.jpg
+    - assets/imgs/ubanda3.jpg
+    - assets/imgs/ubanda4.jpg
+    - assets/imgs/ubanda5.jpg
+    - assets/imgs/ubanda6.jpg
+    - assets/imgs/ubanda7.jpg
+    - assets/imgs/evangelico1.jpg
+    - assets/imgs/evangelico2.jpg
+    - assets/imgs/evangelico3.jpg
+    - assets/imgs/evangelico4.jpg
+    - assets/imgs/evangelico5.jpg
+    - assets/imgs/evangelico6.jpg
+    - assets/imgs/evangelico7.jpg
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

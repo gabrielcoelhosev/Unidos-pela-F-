@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import 'package:unidos_pela_fe/home_widget.dart';
+import 'package:unidos_pela_fe/responsive/catolicor.dart';
 import 'package:unidos_pela_fe/responsive/evangelicor.dart';
 import 'package:unidos_pela_fe/responsive/ubandar.dart';
 
@@ -45,47 +46,65 @@ class _CatolicoDeskState extends State<CatolicoDesk> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                IconButton(
+                  icon: FaIcon(FontAwesomeIcons.whatsapp, color: Colors.white),
+                  onPressed: () async {},
+                ),
                 TextButton(
                     onPressed: () {
                       _voltar();
                     },
                     child: Text(
                       'Home',
-                      style: TextStyle(color: Colors.white, fontSize: 14),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'RobotoCondensed',
+                          fontWeight: FontWeight.bold),
                     )),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 TextButton(
                     onPressed: () {},
                     child: Text(
                       'Católico',
-                      style: TextStyle(color: Colors.grey, fontSize: 14),
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 18,
+                          fontFamily: 'RobotoCondensed',
+                          fontWeight: FontWeight.bold),
                     )),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 TextButton(
                     onPressed: () {
                       _ubanda();
                     },
                     child: Text(
                       'Ubanda',
-                      style: TextStyle(color: Colors.white, fontSize: 14),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'RobotoCondensed',
+                          fontWeight: FontWeight.bold),
                     )),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 TextButton(
                     onPressed: () {
                       _evangelico();
                     },
                     child: Text(
                       'Evangélico',
-                      style: TextStyle(color: Colors.white, fontSize: 14),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'RobotoCondensed',
+                          fontWeight: FontWeight.bold),
                     )),
+                IconButton(
+                  icon: FaIcon(FontAwesomeIcons.instagram, color: Colors.white),
+                  onPressed: () async {},
+                ),
               ],
-            )
+            ),
           ],
         ),
         toolbarHeight: 100,
@@ -147,7 +166,28 @@ class _CatolicoDeskState extends State<CatolicoDesk> {
               ),
             ),
             SizedBox(
-              height: 50,
+              height: 20,
+            ),
+            Center(
+              child: Text(
+                'Eternize seus momentos de fé com a gente!',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: 'RobotoCondensed'),
+              ),
+            ),
+            Center(
+              child: Text(
+                'Entre em contato com nossa equipe:',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: 'RobotoCondensed'),
+              ),
+            ),
+            SizedBox(
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -189,9 +229,28 @@ class _CatolicoDeskState extends State<CatolicoDesk> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 50,
-            )
+            Container(
+              height: 150,
+              width: double.infinity,
+              color: Colors.black,
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    height: 80,
+                  ),
+                  Center(
+                    child: Text(
+                      'Copyright © Todos os direitos reservados Unidos pela Fé',
+                      style: TextStyle(color: Colors.white, fontSize: 12),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
@@ -266,7 +325,7 @@ class ImageViewer extends StatelessWidget {
               icon: Icon(Icons.close, color: Colors.white, size: 30),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CatolicoDesk()));
+                    MaterialPageRoute(builder: (context) => catolicoR()));
               },
             ),
           ),

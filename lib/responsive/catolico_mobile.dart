@@ -43,11 +43,13 @@ class _catolicoMobState extends State<catolicoMob> {
         backgroundColor: Colors.black,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: const Text(
-          'Unidos pela Fé',
-          style: TextStyle(
-              color: Colors.white, fontFamily: 'Dancing', fontSize: 30),
-        ),
+        title: TextButton(
+            onPressed: () {
+              _voltar();
+            },
+            child: Text('Unidos pela Fé',
+                style: TextStyle(
+                    color: Colors.white, fontFamily: 'Dancing', fontSize: 30))),
         toolbarHeight: 70,
         actions: [
           PopupMenuButton<String>(
@@ -257,7 +259,19 @@ class _catolicoMobState extends State<catolicoMob> {
                     ),
                   ),
                 ),
-              ])
+              ]),
+              SizedBox(
+                height: 50,
+              ),
+              Center(
+                child: Text(
+                  'Copyright © Todos os direitos reservados Unidos pela Fé',
+                  style: TextStyle(color: Colors.white, fontSize: 10),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ),

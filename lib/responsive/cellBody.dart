@@ -38,15 +38,44 @@ class _CellBodyState extends State<Cellbody> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                const Center(
-                  child: Text(
-                    'Unidos pela Fé',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 45,
-                        fontFamily: 'Dancing'),
-                    softWrap: true,
-                  ),
+                Column(
+                  children: [
+                    const Center(
+                      child: Text(
+                        'Unidos pela Fé',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 45,
+                            fontFamily: 'Dancing'),
+                        softWrap: true,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            whats();
+                          },
+                          icon: FaIcon(FontAwesomeIcons.whatsapp,
+                              color: Colors.white),
+                        ),
+                        IconButton(
+                          onPressed: () async {
+                            final urlInsta = Uri.parse(
+                                'https://www.instagram.com/unidospelafepht/');
+                            if (await canLaunchUrl(urlInsta)) {
+                              await launchUrl(urlInsta);
+                            } else {
+                              throw 'Não foi possível abrir o link $urlInsta';
+                            }
+                          },
+                          icon: FaIcon(FontAwesomeIcons.instagram,
+                              color: Colors.white),
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ],
             ),

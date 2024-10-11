@@ -5,14 +5,14 @@ import 'package:unidos_pela_fe/responsive/catolicor.dart';
 import 'package:unidos_pela_fe/responsive/evangelicor.dart';
 import 'package:unidos_pela_fe/responsive/ubandar.dart';
 
-class MobileBody extends StatefulWidget {
-  const MobileBody({super.key});
+class Cellbody extends StatefulWidget {
+  const Cellbody({super.key});
 
   @override
-  State<MobileBody> createState() => _MobileBodyState();
+  State<Cellbody> createState() => _CellBodyState();
 }
 
-class _MobileBodyState extends State<MobileBody> {
+class _CellBodyState extends State<Cellbody> {
   List<Data> capas = [
     Data(image: 'assets/imgs/catolico.jpg', text: 'Católico'),
     Data(image: 'assets/imgs/ubanda.jpg', text: 'Ubanda'),
@@ -37,45 +37,27 @@ class _MobileBodyState extends State<MobileBody> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                Column(
-                  children: [
-                    const Center(
-                      child: Text(
-                        'Unidos pela Fé',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 45,
-                            fontFamily: 'Dancing'),
-                        softWrap: true,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: FaIcon(FontAwesomeIcons.whatsapp,
-                              color: Colors.white),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: FaIcon(FontAwesomeIcons.instagram,
-                              color: Colors.white),
-                        )
-                      ],
-                    )
-                  ],
+                const Center(
+                  child: Text(
+                    'Unidos pela Fé',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 45,
+                        fontFamily: 'Dancing'),
+                    softWrap: true,
+                  ),
                 ),
               ],
             ),
             Container(
-              height: 2400,
+              height: 2300,
               width: double.infinity,
               color: Colors.black,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
+                    const SizedBox(height: 50),
                     Text(
                       'Quem Somos?',
                       style: TextStyle(
@@ -83,7 +65,7 @@ class _MobileBodyState extends State<MobileBody> {
                           fontSize: 35,
                           fontFamily: 'Dancing'),
                     ),
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 30),
                     const Text(
                       'Nós somos a Amanda e o Daniel, e juntos formamos uma dupla de fotógrafos chamada Unidos pela Fé.',
                       style: TextStyle(
@@ -140,7 +122,7 @@ class _MobileBodyState extends State<MobileBody> {
                           fontFamily: 'Dancing',
                           fontSize: 35),
                     ),
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 10),
                     GridView.builder(
                       itemCount: capas.length,
                       shrinkWrap: true,
@@ -148,7 +130,7 @@ class _MobileBodyState extends State<MobileBody> {
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 1,
-                        childAspectRatio: 1.2,
+                        childAspectRatio: 1,
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
@@ -233,7 +215,7 @@ class _MobileBodyState extends State<MobileBody> {
         ),
         const SizedBox(height: 20),
         Container(
-          height: 800,
+          height: 650,
           width: 500,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
@@ -291,7 +273,7 @@ class _MobileBodyState extends State<MobileBody> {
           style: TextButton.styleFrom(backgroundColor: Colors.white),
           onPressed: () {},
           child: const Padding(
-            padding: EdgeInsets.all(7.0),
+            padding: EdgeInsets.all(5.0),
             child: Row(
               children: [
                 FaIcon(FontAwesomeIcons.whatsapp,
@@ -308,7 +290,7 @@ class _MobileBodyState extends State<MobileBody> {
           style: TextButton.styleFrom(backgroundColor: Colors.white),
           onPressed: () {},
           child: const Padding(
-            padding: EdgeInsets.all(7.0),
+            padding: EdgeInsets.all(5.0),
             child: Row(
               children: [
                 FaIcon(FontAwesomeIcons.whatsapp,

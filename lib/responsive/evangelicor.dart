@@ -15,7 +15,10 @@ class _evangelicoRState extends State<evangelicoR> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ResponsiveLayout(
-          mobileBody: evangelicoM(), desktopBody: evangelicoDesk()),
+        mobileBody: evangelicoM(),
+        desktopBody: evangelicoDesk(),
+        cellBody: evangelicoM(), desktopBodyC: evangelicoDesk(),
+      ),
     );
   }
 }

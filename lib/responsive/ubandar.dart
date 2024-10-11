@@ -15,7 +15,7 @@ class _ubandarRState extends State<ubandarR> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:
-          ResponsiveLayout(mobileBody: ubandaMob(), desktopBody: ubandaDesk()),
+          ResponsiveLayout(mobileBody: ubandaMob(), desktopBody: ubandaDesk(), cellBody: ubandaMob(), desktopBodyC: ubandaDesk(),),
     );
   }
 }

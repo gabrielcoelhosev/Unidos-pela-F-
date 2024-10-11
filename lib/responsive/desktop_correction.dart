@@ -5,14 +5,14 @@ import 'package:unidos_pela_fe/responsive/catolicor.dart';
 import 'package:unidos_pela_fe/responsive/evangelicor.dart';
 import 'package:unidos_pela_fe/responsive/ubandar.dart';
 
-class DesktopBody extends StatefulWidget {
-  const DesktopBody({super.key});
+class DesktopBodyC extends StatefulWidget {
+  const DesktopBodyC({super.key});
 
   @override
-  State<DesktopBody> createState() => _DesktopBodyState();
+  State<DesktopBodyC> createState() => _DesktopBodyCState();
 }
 
-class _DesktopBodyState extends State<DesktopBody> {
+class _DesktopBodyCState extends State<DesktopBodyC> {
   List<Data> capas = [
     Data(image: 'assets/imgs/catolico.jpg', text: 'Católico'),
     Data(image: 'assets/imgs/ubanda.jpg', text: 'Ubanda'),
@@ -76,9 +76,6 @@ class _DesktopBodyState extends State<DesktopBody> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(
-                    width: 0,
-                  ),
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Container(
@@ -165,9 +162,6 @@ class _DesktopBodyState extends State<DesktopBody> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    width: 0,
-                  )
                 ],
               ),
             ),
@@ -193,12 +187,12 @@ class _DesktopBodyState extends State<DesktopBody> {
                       builder: (context, constraints) {
                         // Calcular a largura disponível para cada item no grid
                         final screenWidth = MediaQuery.of(context).size.width;
-                        int crossAxisCount = 3; // Padrão de 3 colunas
+                        int crossAxisCount = 1; // Padrão de 3 colunas
                         double itemWidth = screenWidth / crossAxisCount;
 
                         // Aumenta o número de colunas se a tela for grande
-                        if (screenWidth > 1200) {
-                          crossAxisCount = 3;
+                        if (screenWidth > 1340) {
+                          crossAxisCount = 1;
                         } else if (screenWidth > 800) {
                           crossAxisCount = 3;
                         } else {
@@ -207,7 +201,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                         }
 
                         // Definir proporção baseada na largura do item
-                        double itemHeight = itemWidth * 0.8; // Proporção 3:4
+                        double itemHeight = itemWidth * 1.2; // Proporção 3:4
 
                         return GridView.builder(
                           physics: const NeverScrollableScrollPhysics(),
@@ -336,10 +330,10 @@ class _DesktopBodyState extends State<DesktopBody> {
                           ],
                         ),
                         const SizedBox(
-                          height: 80,
+                          height: 40,
                         ),
                         Flexible(
-                          child: Row(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               TextButton(
@@ -350,6 +344,8 @@ class _DesktopBodyState extends State<DesktopBody> {
                                   child: const Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         FaIcon(FontAwesomeIcons.whatsapp,
                                             color: Colors.green, size: 25),
@@ -366,7 +362,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                                     ),
                                   )),
                               const SizedBox(
-                                width: 40,
+                                height: 40,
                               ),
                               TextButton(
                                   style: TextButton.styleFrom(
@@ -375,6 +371,8 @@ class _DesktopBodyState extends State<DesktopBody> {
                                   child: const Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         FaIcon(FontAwesomeIcons.whatsapp,
                                             color: Colors.green, size: 25),

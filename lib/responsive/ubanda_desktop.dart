@@ -6,6 +6,8 @@ import 'package:unidos_pela_fe/home_widget.dart';
 import 'package:unidos_pela_fe/responsive/catolicor.dart';
 import 'package:unidos_pela_fe/responsive/evangelicor.dart';
 import 'package:unidos_pela_fe/responsive/ubandar.dart';
+import 'package:unidos_pela_fe/responsive/whats.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ubandaDesk extends StatefulWidget {
   const ubandaDesk({super.key});
@@ -50,7 +52,9 @@ class _ubandaDeskState extends State<ubandaDesk> {
               children: [
                 IconButton(
                   icon: FaIcon(FontAwesomeIcons.whatsapp, color: Colors.white),
-                  onPressed: () async {},
+                  onPressed: () {
+                    whats();
+                  },
                 ),
                 TextButton(
                     onPressed: () {
@@ -103,7 +107,15 @@ class _ubandaDeskState extends State<ubandaDesk> {
                     )),
                 IconButton(
                   icon: FaIcon(FontAwesomeIcons.instagram, color: Colors.white),
-                  onPressed: () async {},
+                  onPressed: () async {
+                    final urlInsta =
+                        Uri.parse('https://www.instagram.com/unidospelafepht/');
+                    if (await canLaunchUrl(urlInsta)) {
+                      await launchUrl(urlInsta);
+                    } else {
+                      throw 'Não foi possível abrir o link $urlInsta';
+                    }
+                  },
                 ),
               ],
             ),
@@ -196,7 +208,14 @@ class _ubandaDeskState extends State<ubandaDesk> {
               children: [
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.white),
-                  onPressed: () {},
+                  onPressed: () async {
+                    final urlA = Uri.parse('http://wa.me/554984004220');
+                    if (await canLaunchUrl(urlA)) {
+                      await launchUrl(urlA);
+                    } else {
+                      throw 'Não foi possível abrir o link $urlA';
+                    }
+                  },
                   child: const Padding(
                     padding: EdgeInsets.all(7.0),
                     child: Row(
@@ -214,7 +233,14 @@ class _ubandaDeskState extends State<ubandaDesk> {
                 const SizedBox(width: 20),
                 TextButton(
                   style: TextButton.styleFrom(backgroundColor: Colors.white),
-                  onPressed: () {},
+                  onPressed: () async {
+                    final urlD = Uri.parse('http://wa.me/554999791770');
+                    if (await canLaunchUrl(urlD)) {
+                      await launchUrl(urlD);
+                    } else {
+                      throw 'Não foi possível abrir o link $urlD';
+                    }
+                  },
                   child: const Padding(
                     padding: EdgeInsets.all(7.0),
                     child: Row(
@@ -257,6 +283,10 @@ class _ubandaDeskState extends State<ubandaDesk> {
         ),
       ),
     );
+  }
+
+  void whats() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Whats()));
   }
 
   void _voltar() {

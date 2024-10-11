@@ -6,6 +6,7 @@ import 'package:unidos_pela_fe/home_widget.dart';
 import 'package:unidos_pela_fe/responsive/catolicor.dart';
 import 'package:unidos_pela_fe/responsive/evangelicor.dart';
 import 'package:unidos_pela_fe/responsive/ubandar.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class catolicoMob extends StatefulWidget {
   const catolicoMob({super.key});
@@ -105,7 +106,14 @@ class _catolicoMobState extends State<catolicoMob> {
                 PopupMenuItem(
                     child: Center(
                   child: TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () async {
+                        final urlA = Uri.parse('http://wa.me/554984004220');
+                        if (await canLaunchUrl(urlA)) {
+                          await launchUrl(urlA);
+                        } else {
+                          throw 'Não foi possível abrir o link $urlA';
+                        }
+                      },
                       icon: const FaIcon(FontAwesomeIcons.whatsapp,
                           color: Colors.green),
                       label: const Text(
@@ -116,7 +124,14 @@ class _catolicoMobState extends State<catolicoMob> {
                 PopupMenuItem(
                     child: Center(
                   child: TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () async {
+                        final urlD = Uri.parse('http://wa.me/554999791770');
+                        if (await canLaunchUrl(urlD)) {
+                          await launchUrl(urlD);
+                        } else {
+                          throw 'Não foi possível abrir o link $urlD';
+                        }
+                      },
                       icon: const FaIcon(FontAwesomeIcons.whatsapp,
                           color: Colors.green),
                       label: const Text(
@@ -127,7 +142,15 @@ class _catolicoMobState extends State<catolicoMob> {
                 PopupMenuItem(
                     child: Center(
                         child: TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () async {
+                    final urlInsta =
+                        Uri.parse('https://www.instagram.com/unidospelafepht/');
+                    if (await canLaunchUrl(urlInsta)) {
+                      await launchUrl(urlInsta);
+                    } else {
+                      throw 'Não foi possível abrir o link $urlInsta';
+                    }
+                  },
                   icon: const FaIcon(
                     FontAwesomeIcons.instagram,
                     color: Color(0xFFE1306C),

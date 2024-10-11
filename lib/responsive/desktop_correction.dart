@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:unidos_pela_fe/responsive/catolicor.dart';
 import 'package:unidos_pela_fe/responsive/evangelicor.dart';
 import 'package:unidos_pela_fe/responsive/ubandar.dart';
+import 'package:unidos_pela_fe/responsive/whats.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DesktopBodyC extends StatefulWidget {
   const DesktopBodyC({super.key});
@@ -53,12 +55,22 @@ class _DesktopBodyCState extends State<DesktopBodyC> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            whats();
+                          },
                           icon: FaIcon(FontAwesomeIcons.whatsapp,
                               color: Colors.white),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () async {
+                            final urlInsta = Uri.parse(
+                                'https://www.instagram.com/unidospelafepht/');
+                            if (await canLaunchUrl(urlInsta)) {
+                              await launchUrl(urlInsta);
+                            } else {
+                              throw 'Não foi possível abrir o link $urlInsta';
+                            }
+                          },
                           icon: FaIcon(FontAwesomeIcons.instagram,
                               color: Colors.white),
                         )
@@ -339,7 +351,15 @@ class _DesktopBodyCState extends State<DesktopBodyC> {
                                   style: TextButton.styleFrom(
                                     backgroundColor: Colors.white,
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final urlA =
+                                        Uri.parse('http://wa.me/554984004220');
+                                    if (await canLaunchUrl(urlA)) {
+                                      await launchUrl(urlA);
+                                    } else {
+                                      throw 'Não foi possível abrir o link $urlA';
+                                    }
+                                  },
                                   child: const Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Row(
@@ -366,7 +386,15 @@ class _DesktopBodyCState extends State<DesktopBodyC> {
                               TextButton(
                                   style: TextButton.styleFrom(
                                       backgroundColor: Colors.white),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final urlD =
+                                        Uri.parse('http://wa.me/554999791770');
+                                    if (await canLaunchUrl(urlD)) {
+                                      await launchUrl(urlD);
+                                    } else {
+                                      throw 'Não foi possível abrir o link $urlD';
+                                    }
+                                  },
                                   child: const Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Row(
@@ -438,6 +466,10 @@ class _DesktopBodyCState extends State<DesktopBodyC> {
         ),
       ),
     );
+  }
+
+  void whats() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Whats()));
   }
 
   void _redirecionador(Data religi) {

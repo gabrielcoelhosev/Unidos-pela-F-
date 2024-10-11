@@ -21,7 +21,6 @@ class _DesktopBodyState extends State<DesktopBody> {
 
   @override
   Widget build(BuildContext context) {
-    final wid = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
